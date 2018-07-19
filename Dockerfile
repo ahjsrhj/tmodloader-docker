@@ -13,15 +13,15 @@ RUN apt-get update && \
     zip \
     wget && \
     wget -P / http://terraria.org/server/terraria-server-1352.zip && \
-    wget -P / https://github.com/blushiemagic/tModLoader/releases/download/v0.10.1.3/tModLoader.Linux.v0.10.1.3.zip && \ 
+    wget -P / https://github.com/blushiemagic/tModLoader/releases/download/v0.10.1.5/tModLoader.Linux.v0.10.1.5.zip && \ 
     unzip terraria-server-1352.zip -d /server && \
     rm terraria-server-1352.zip && \
     rm -rf /server/Mac && \
     rm -rf /server/Windows && \
     mv /server/Linux/* /server/ && \
     rm -rf /server/Linux && \
-    unzip tModLoader.Linux.v0.10.1.3.zip -d /server && \
-    rm /tModLoader.Linux.v0.10.1.3.zip && \
+    unzip tModLoader.Linux.v0.10.1.5.zip -d /server && \
+    rm /tModLoader.Linux.v0.10.1.5.zip && \
     apt-get remove -y zip \
     wget && \
     apt-get clean && \
