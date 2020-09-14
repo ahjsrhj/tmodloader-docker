@@ -1,4 +1,5 @@
-FROM mono:5.8
+#FROM mono:5.8
+FROM mono:latest
 
 MAINTAINER Hexer <hexrhj@gmail.com>
 
@@ -12,16 +13,16 @@ RUN apt-get update && \
     apt-get install -y \
     zip \
     wget && \
-    wget -P / http://terraria.org/server/terraria-server-1352.zip && \
-    wget -P / https://github.com/blushiemagic/tModLoader/releases/download/v0.10.1.5/tModLoader.Linux.v0.10.1.5.zip && \ 
-    unzip terraria-server-1352.zip -d /server && \
-    rm terraria-server-1352.zip && \
-    rm -rf /server/Mac && \
-    rm -rf /server/Windows && \
-    mv /server/Linux/* /server/ && \
-    rm -rf /server/Linux && \
-    unzip tModLoader.Linux.v0.10.1.5.zip -d /server && \
-    rm /tModLoader.Linux.v0.10.1.5.zip && \
+    wget -P / https://www.terraria.org/system/dedicated_servers/archives/000/000/039/original/terraria-server-1405.zip && \
+    wget -P / https://github.com/tModLoader/tModLoader/releases/download/v0.11.7.5/tModLoader.Linux.v0.11.7.5.zip && \ 
+    unzip terraria-server-1405.zip -d /server && \
+    rm terraria-server-1405.zip && \
+    rm -rf /server/1405/Mac && \
+    rm -rf /server/1405/Windows && \
+    mv /server/1405/Linux/* /server/ && \
+    rm -rf /server/1405 && \
+    unzip -o tModLoader.Linux.v0.11.7.5.zip -d /server && \
+    rm /tModLoader.Linux.v0.11.7.5.zip && \
     apt-get remove -y zip \
     wget && \
     apt-get clean && \
